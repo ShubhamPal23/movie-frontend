@@ -1,0 +1,87 @@
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1b1b1b;
+  padding: 10px 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.navbar-brand a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff6600;
+  text-decoration: none;
+}
+
+.navbar-links a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 26px;
+}
+
+.navbar-links a:hover {
+  color: #ff6600;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.navbar-actions .search-bar {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.navbar-links a.active {
+  color: orange;
+  scale: calc(1.04);
+}
+
+.auth-button {
+  background-color: transparent;
+  border: 2px solid #ff6600;
+  color: #ff6600;
+  padding: 8px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+.auth-button:hover {
+  background-color: #ff6600;
+  color: #fff;
+}
+
+.navbar-welcome {
+  font-size: 22px;
+  color: #ff6600;
+}
+
+.navbar-search-bar {
+  position: absolute;
+  top: 66px;
+  right: 2px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  z-index: 10;
+}
+
+.navbar-search-bar input {
+  width: 98.5vw;
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+.search-icon {
+  cursor: pointer;
+}
