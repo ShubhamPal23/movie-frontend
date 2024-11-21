@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Auth.css";
 
@@ -8,6 +9,7 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  const navigate=useNavigate()
 
 //   const handleSignup = async (e) => {
 //     e.preventDefault();
@@ -35,7 +37,7 @@ const handleSignup = async (e) => {
       });
       setMessage(response.data.message);
       if (response.data.name) {
-        window.location.href = "/login";
+        navigate("/login");
       }
     } catch (error) {
       setMessage(error.response?.data?.message || "An error occurred");

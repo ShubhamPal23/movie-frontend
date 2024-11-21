@@ -1,8 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const ProtectedRoute = ({ children }) => {
   const username = localStorage.getItem("username");
+  const navigate=useNavigate();
 
   if (!username) {
     return (
@@ -12,13 +14,13 @@ const ProtectedRoute = ({ children }) => {
           <div className="protect-button">
             <button
               className="auth-button"
-              onClick={() => (window.location.href = "/login")}
+              onClick={() => (navigate("/login"))}
             >
               Login
             </button>
             <button
               className="auth-button"
-              onClick={() => (window.location.href = "/signup")}
+              onClick={() => (navigate("/signup"))}
             >
               Sign Up
             </button>
