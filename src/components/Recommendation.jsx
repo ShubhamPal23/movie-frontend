@@ -12,11 +12,10 @@ const Recommendation = () => {
   const [keyword, setKeyword] = useState("");
   const [sortByYear, setSortByYear] = useState(true);
   const [currentPage, setCurrentPage] = useState(0);
-  const moviesPerPage = 20; 
+  const moviesPerPage = 20;
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  
   useEffect(() => {
     const username = localStorage.getItem("username");
     if (username) {
@@ -46,7 +45,7 @@ const Recommendation = () => {
       }
 
       dispatch(setFilteredMovies(results));
-      setCurrentPage(0); 
+      setCurrentPage(0);
       navigate(`/recommendation?keyword=${encodeURIComponent(keyword)}`);
     }
   };
@@ -61,23 +60,14 @@ const Recommendation = () => {
   );
 
   return (
-    <div
-      id="recommendation"
-      className={isLoggedIn ? "" : "blurred"} 
-    >
+    <div id="recommendation" className={isLoggedIn ? "" : "blurred"}>
       {!isLoggedIn && (
         <div className="overlay">
           <h2>Please log in to access recommendations</h2>
-          <button
-            className="auth-button"
-            onClick={() => navigate("/login")}
-          >
+          <button className="auth-button" onClick={() => navigate("/login")}>
             Login
           </button>
-          <button
-            className="auth-button"
-            onClick={() => navigate("/signup")}
-          >
+          <button className="auth-button" onClick={() => navigate("/signup")}>
             Signup
           </button>
         </div>
@@ -111,27 +101,40 @@ const Recommendation = () => {
               <div className="recom-img">
                 <img
                   onClick={() => {
-                    navigate(`/recommendation/${encodeURIComponent(movie.movieTitle)}`);
+                    navigate(
+                      `/recommendation/${encodeURIComponent(movie.movieTitle)}`
+                    );
                   }}
                   src={movie.imageLink}
                   alt={movie.movieTitle}
                 />
               </div>
               <div className="recom-details">
-                <a
-                  style={{ textDecoration: "none", cursor: "pointer" }}
-                  onClick={() => {
-                    navigate(`/recommendation/${encodeURIComponent(movie.movieTitle)}`);
-                  }}
-                >
-                  <h3 style={{ color: "black" }}>
-                    <strong>{movie.movieTitle}</strong>
-                  </h3>
-                </a>
+                <div className="recomm-heading">
+                  <a
+                    style={{ textDecoration: "none", cursor: "pointer" }}
+                    onClick={() => {
+                      navigate(
+                        `/recommendation/${encodeURIComponent(
+                          movie.movieTitle
+                        )}`
+                      );
+                    }}
+                  >
+                    <h3 style={{ color: "black" }}>
+                      <strong>{movie.movieTitle}</strong>
+                    </h3>
+                  </a>
+                  <span style={{ color: "#00000075", fontSize:"20px",marginRight:"10px" }}>{movie.movieYear}</span>
+                </div>
                 <p style={{ color: "black" }}>{movie.genres || "N/A"}</p>
                 <p
                   className="recom-overview"
-                  style={{ color: "black", marginTop: "20px", fontSize: "1rem" }}
+                  style={{
+                    color: "black",
+                    marginTop: "20px",
+                    fontSize: "1rem",
+                  }}
                 >
                   {movie.overview || "N/A"}
                 </p>

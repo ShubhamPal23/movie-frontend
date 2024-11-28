@@ -43,7 +43,9 @@
   text-align: left;
   margin-left: 10px;
 }
-
+.recom-details{
+  width: 100%;
+}
 .recommend-input {
   outline: none;
   padding: 10px;
@@ -84,4 +86,8 @@
 .recommendation-content {
   opacity: 0.3;
   z-index: 1;
+}
+.recomm-heading{
+  display: flex;
+  justify-content: space-between;
 }
