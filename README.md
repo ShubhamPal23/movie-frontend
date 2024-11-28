@@ -5,6 +5,10 @@ MovieZone is a movie recommendation system that helps you discover your next fav
 
 ---
 
+Link of the site: https://smart-movie-recommendation.netlify.app/
+
+---
+
 ## Features 🚀  
 
 - **Personalized Recommendations**: Enter keywords to get movie suggestions tailored to your preferences.  
