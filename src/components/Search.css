@@ -26,7 +26,7 @@ p {
   font-size: 1.2rem;
 }
 
-.movie-card {
+/* .movie-card {
   background-color: #333;
   border-radius: 10px;
   padding: 15px;
@@ -54,4 +54,4 @@ p {
 .movie-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
-}
+} */

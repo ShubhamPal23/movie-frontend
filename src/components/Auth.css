@@ -6,7 +6,6 @@
   background: linear-gradient(135deg, #6a11cb, #2575fc);
   font-family: Arial, sans-serif;
 }
-
 .auth-form {
   background-color: #ffffff;
   padding: 20px 30px;
@@ -14,7 +13,6 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
 }
-
 .auth-form h2 {
   text-align: center;
   color: #333;

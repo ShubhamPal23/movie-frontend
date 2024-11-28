@@ -83,7 +83,7 @@ const Recommendation = () => {
         onChange={(e) => setKeyword(e.target.value)}
         className="recommend-input"
       />
-      <button onClick={handleRecommend} className="search-button">
+      <button onClick={handleRecommend} className="recommend-button">
         Recommend
       </button>
       <label>

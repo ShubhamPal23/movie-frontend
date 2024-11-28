@@ -4,9 +4,13 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
+:root{
+  --bgcolor:rgb(21 97 59 / 75%);
+  --searchbar:linear-gradient(to right, rgba(30, 213, 169, 1) 0%, rgba(1, 180, 228, 1) 100%);
+  --default:#ff6600;
+}
 #root{
-  background-color: rgb(9,9,23);
+   background-color: rgb(9,9,23); 
 }
 ::-webkit-scrollbar {
   width: 10px;

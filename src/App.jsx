@@ -64,7 +64,7 @@ const App = () => {
           console.error("Error loading CSV files:", error);
         }
       };
-
+      console.log("loaded recommend")
       loadAllMovies();
     }
   }, [dispatch, isMoviesLoaded]);

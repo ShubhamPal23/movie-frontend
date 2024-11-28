@@ -56,7 +56,17 @@
   color: #333;
   width: 236px;
 }
-
+.recommend-button{
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #ff6600;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 #recommendation.blurred {
   filter: blur(8px);
   pointer-events: none;

@@ -31,11 +31,11 @@
   background-color: transparent;
   border: 2px solid #ff6600;
   color: #ff6600;
-  padding: 8px 15px;
+  padding: 0px 10px;
   margin-left: 20px;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 19px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -49,6 +49,7 @@
   margin-top: 20px;
   list-style: none;
   padding: 0;
+  text-decoration: none;
 }
 
 .pagination li {
@@ -57,6 +58,7 @@
 
 .pagination a,
 .pagination button {
+  text-decoration: none;
   margin: 0 5px;
   padding: 10px 15px;
   border: 2px solid rgb(30, 182, 16);
@@ -89,6 +91,7 @@
   color: #fff;
 }
 .search-bar {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,13 +105,16 @@
   font-size: 16px;
   border-radius: 30px;
   color: rgba(0, 0, 0, 0.5);
-  width: 100%;
+  width: 90%;
 }
 .search-button {
+  position: absolute;
+  top: 50px;
+  right: 62px;
   padding: 10px 20px;
   font-size: 16px;
   color: #fff;
-  background-color: #ff6600;
+  background: var(--searchbar);
   border: none;
   border-radius: 5px;
   margin-left: 10px;
